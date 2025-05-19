@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Application</title>
+	<link rel="stylesheet" href="/css/dude.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+</head>
+<body>
+    <h1>🎭 The Joke Factory 🎭</h1>
+    <p>Submit your best (or worst) jokes below! Our team of highly unqualified judges will... probably ignore them.</p>
+    
+    <form action="/apply" method="post">
+        <fieldset>
+            <legend>Your Information</legend>
+            <label>
+                Name: 
+                <input required type="text" name="name" placeholder="Your name or stage name"/>
+            </label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Joke Details</legend>
+            
+            <label>
+                Type: 
+                <input required type="text" name="type" id="joke-type" placeholder="e.g., Knock-knock, Dad joke, Pun"/>
+                <span class="tooltip" title="Common joke types: Knock-knock, Dad joke, Pun, One-liner, Observational, Dark humor">ℹ️</span>
+            </label>
+            
+            <div id="joke-type-suggestions">
+                <div class="type-bubble" onclick="document.getElementById('joke-type').value = 'Dad joke'">Dad joke</div>
+                <div class="type-bubble" onclick="document.getElementById('joke-type').value = 'Knock-knock'">Knock-knock</div>
+                <div class="type-bubble" onclick="document.getElementById('joke-type').value = 'Pun'">Pun</div>
+                <div class="type-bubble" onclick="document.getElementById('joke-type').value = 'One-liner'">One-liner</div>
+                <div class="type-bubble" onclick="document.getElementById('joke-type').value = 'Observational'">Observational</div>
+            </div>
+            
+            <label>
+                Setup: 
+                <input required type="text" name="setup" id="setup" placeholder="The beginning of your joke" maxlength="100"/>
+                <div id="character-counter"><span id="setup-count">0</span>/100</div>
+            </label>
+            
+            <div class="joke-example">
+                <p><span class="good">Good setup example:</span> "Why don't scientists trust atoms?"</p>
+                <p><span class="bad">Bad setup example:</span> "So there's this thing about science..."</p>
+                <p>Tip: Your setup should create expectation but not give away the punchline!</p>
+            </div>
+            
+            <label>
+                Punchline: 
+                <input required type="text" name="punchline" id="punchline" placeholder="The funny payoff" maxlength="100"/>
+                <div id="character-counter"><span id="punchline-count">0</span>/100</div>
+            </label>
+            
+            <div class="joke-example">
+                <p><span class="good">Good punchline example:</span> "Because they make up everything!" 
+                    <span class="emoji-rating">😂</span></p>
+                <p><span class="bad">Bad punchline example:</span> "Because atoms are small." 
+                    <span class="emoji-rating">😐</span></p>
+                <p>Tip: The punchline should subvert expectations in a clever way!</p>
+            </div>
+            
+            <div class="joke-example">
+                <h3>Complete Joke Examples:</h3>
+                <p><strong>Good:</strong> "I'm reading a book about anti-gravity. It's impossible to put down!" 
+                    <span class="emoji-rating">🤣</span></p>
+                <p><strong>Bad:</strong> "Books are heavy. Gravity makes them fall." 
+                    <span class="emoji-rating">💤</span></p>
+            </div>
+        </fieldset>
+
+        <div style="text-align: center;">
+            <input type="reset" value="Start Over" />
+            <input type="submit" value="Submit My Masterpiece!"/>
+        </div>
+        
+        <hr>
+        <div style="text-align: center;">
+            <a href="/"> HOME</a> | 
+            <a href="#" onclick="alert('Joke writing tip: The key to humor is surprise! Make your punchline unexpected but still make sense.')"> Joke Tip</a> |
+        </div>
+    </form>

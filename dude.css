@@ -1,0 +1,126 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+label{
+    font-size: large;
+}
+h2{
+    text-align: center;
+}
+body {
+    font-family: 'Comic Neue', cursive;
+    background-color: #FFF9C4;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #FF5722;
+    text-align: center;
+    text-shadow: 2px 2px 0px #FFEB3B;
+    font-size: 2.5em;
+    font-family: 'Roboto';
+}
+
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 3px dashed #FF9800;
+}
+
+fieldset {
+    border: 2px solid #8BC34A;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #FF5722;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #FFC107;
+    border-radius: 5px;
+    font-family: 'Comic Neue', cursive;
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #E64A19;
+}
+
+.joke-example {
+    background-color: #E3F2FD;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 5px solid #2196F3;
+}
+
+.good {
+    color: #4CAF50;
+}
+
+.bad {
+    color: #F44336;
+}
+
+.tooltip {
+    cursor: help;
+    color: #2196F3;
+    text-decoration: underline dotted;
+}
+
+#joke-type-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.type-bubble {
+    background-color: #FFEB3B;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.type-bubble:hover {
+    background-color: #FFC107;
+}
+
+#character-counter {
+    font-size: 0.8em;
+    text-align: right;
+    color: #757575;
+}
+
+.emoji-rating {
+    font-size: 1.5em;
+    margin-left: 10px;
+}
